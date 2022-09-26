@@ -20,12 +20,13 @@ namespace es2._2022_2023
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int recordlenght = 528.5;
+            int recordlenght = 528;
             var f = new FileStream(@"./veneto_verona.csv", FileMode.Open, FileAccess.ReadWrite);
             int tot = ((int)(f.Length));
-            int linee = tot / recordlenght;
+            int linee = tot / recordlenght+1;
             string line = Convert.ToString(linee);
             MessageBox.Show(line);
+            f.Close();
         }
     }
 }
