@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace es2._2022_2023
 {
@@ -19,7 +20,12 @@ namespace es2._2022_2023
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pikjk;
+            int recordlenght = 528.5;
+            var f = new FileStream(@"./veneto_verona.csv", FileMode.Open, FileAccess.ReadWrite);
+            int tot = ((int)(f.Length));
+            int linee = tot / recordlenght;
+            string line = Convert.ToString(linee);
+            MessageBox.Show(line);
         }
     }
 }
