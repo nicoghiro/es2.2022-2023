@@ -16,5 +16,10 @@ namespace es2._2022_2023
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
