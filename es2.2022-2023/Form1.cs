@@ -19,7 +19,7 @@ namespace es2._2022_2023
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lknlkpjk;
+            pikjk;
         }
     }
 }
