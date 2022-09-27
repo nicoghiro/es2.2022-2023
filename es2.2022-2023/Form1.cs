@@ -26,8 +26,8 @@ namespace es2._2022_2023
         private void button1_Click(object sender, EventArgs e)
         {
           
-            string x = textBox1.Text.Trim();
-            x.ToUpper();          
+            string x = textBox1.Text.ToUpper();
+                      
             int recordlenght = 529;
             var f = new FileStream(@"./veneto_verona.csv", FileMode.Open, FileAccess.ReadWrite);
             int tot = ((int)(f.Length));
