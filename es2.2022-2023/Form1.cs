@@ -74,7 +74,7 @@ namespace es2._2022_2023
             string[] com = linea.Split(';');
             comune post;
             post.posto = com[0];
-            post.modalità = com[3];
+            post.modalità = com[7];
             f.Close();
             return post;
             
