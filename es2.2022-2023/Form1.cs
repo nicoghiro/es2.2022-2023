@@ -23,7 +23,7 @@ namespace es2._2022_2023
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private int ricerca(string filename = @"./veneto_verona.csv")
         {
             textBox1.Text = textBox1.Text.Trim();
             string x = textBox1.Text.ToUpper();                    
@@ -43,8 +43,8 @@ namespace es2._2022_2023
                 
                 int result = string.Compare(a.posto, x);
                 if (a.posto == x) { 
-                    MessageBox.Show(a.modalità);
-                    pos++;
+                    
+                    return m;
                 }
                 
                 else if (result==-1) { 
@@ -58,7 +58,9 @@ namespace es2._2022_2023
             
             if (pos == -1) { 
                 MessageBox.Show("Comune non trovato");
+                return 3000;
             }
+            return 0;
 
 
         }
@@ -78,6 +80,26 @@ namespace es2._2022_2023
             f.Close();
             return post;
             
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int posto = ricerca();
+            string postonum = Convert.ToString(posto);
+            MessageBox.Show(postonum);
+            byte[] br;
+            var f = new FileStream(@"./veneto_verona.csv", FileMode.Open, FileAccess.ReadWrite);
+            f.Seek(posto * 529, SeekOrigin.Begin);
+            BinaryReader reader = new BinaryReader(f);
+            br = reader.ReadBytes(529);
+            string linea = Encoding.ASCII.GetString(br, 0, br.Length);
+            string[] com = linea.Split(';');
+            comune post;
+            post.posto = com[0];
+            post.modalità = com[7];
+            f.Close();
+            MessageBox.Show( post.modalità);
+
 
         }
       public struct comune
