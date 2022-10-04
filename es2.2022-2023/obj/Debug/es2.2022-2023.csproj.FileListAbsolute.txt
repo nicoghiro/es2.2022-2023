@@ -19,3 +19,4 @@ C:\Users\nicolas\OneDrive\Desktop\scuola\informatica\es2.2022-2023\es2.2022-2023
 C:\Users\nicolas\OneDrive\Desktop\scuola\informatica\es2.2022-2023\es2.2022-2023\obj\Debug\es2.2022-2023.csproj.CoreCompileInputs.cache
 C:\Users\nicolas\OneDrive\Desktop\scuola\informatica\es2.2022-2023\es2.2022-2023\obj\Debug\es2.2022-2023.exe
 C:\Users\nicolas\OneDrive\Desktop\scuola\informatica\es2.2022-2023\es2.2022-2023\obj\Debug\es2.2022-2023.pdb
+C:\Users\nicolas\OneDrive\Desktop\scuola\informatica\es2.2022-2023\es2.2022-2023\obj\Debug\es2.2022-2023.csproj.SuggestedBindingRedirects.cache
